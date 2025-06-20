@@ -52,7 +52,6 @@ export const useUserStore = create<any>()((set) => ({
         body: JSON.stringify(input),
       });
       const responseData = await response.json();
-      console.log("Login -->> ", responseData);
       if (responseData.success) {
         toast.success(responseData.message);
         set({
