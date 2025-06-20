@@ -1,6 +1,6 @@
 import toast from "react-hot-toast";
 import { create } from "zustand";
-const API_END_POINT = "http://localhost:4000/api/v1/cart";
+const API_END_POINT = "https://restaurant-app-2-neei.onrender.com/api/v1/cart";
 
 type CartStore = {
   cart: any[];
@@ -141,5 +141,6 @@ export const useCartStore = create<CartStore>()((set) => ({
     } catch (error) {
       console.log(error);
     }
-  },
+  }
+  
 }));

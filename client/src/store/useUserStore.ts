@@ -1,7 +1,7 @@
 import toast from "react-hot-toast";
 import { create } from "zustand";
 // import { createJSONStorage, persist } from "zustand/middleware";
-const API_END_POINT = "http://localhost:4000/api/v1/user";
+const API_END_POINT = "https://restaurant-app-2-neei.onrender.com/api/v1/user";
 
 export const useUserStore = create<any>()((set) => ({
   user: null,

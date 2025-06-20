@@ -1,5 +1,5 @@
 import { create } from "zustand";
-const API_END_POINT = "http://localhost:4000/api/v1/city";
+const API_END_POINT = "https://restaurant-app-2-neei.onrender.com/api/v1/city";
 
 type CityStore = {
   cityList: any[]; // Replace `any` with your actual city type if available
@@ -20,5 +20,6 @@ export const useCityStore = create<CityStore>()((set) => ({
     } catch (error) {
       console.log("Error -->> ", error);
     }
-  },
+  }
+  
 }));

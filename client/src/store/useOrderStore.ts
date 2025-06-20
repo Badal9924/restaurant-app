@@ -1,5 +1,5 @@
 import { create } from "zustand";
-const API_END_POINT = "http://localhost:4000/api/v1/order";
+const API_END_POINT = "https://restaurant-app-2-neei.onrender.com/api/v1/order";
 
 type OrderStore = {
   loading: boolean;

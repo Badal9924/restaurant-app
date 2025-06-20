@@ -1,6 +1,6 @@
 import toast from "react-hot-toast";
 import { create } from "zustand";
-const API_END_POINT = "http://localhost:4000/api/v1/restaurant";
+const API_END_POINT = "https://restaurant-app-2-neei.onrender.com/api/v1/restaurant";
 
 export const useRestaurantStore = create<any>()((set) => ({
   loading: false,
@@ -173,4 +173,5 @@ export const useRestaurantStore = create<any>()((set) => ({
       console.log(error);
     }
   },
+  
 }));
