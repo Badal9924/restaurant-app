@@ -47,12 +47,12 @@ function SearchPage() {
                 <div >
                     <h1 className="mt-4 text-xl">
                         {
-                            searchedRestaurant?.length !== 0 ? `` : "No Result Found "
+                            searchedRestaurant?.length === 0 && searchedMenuList?.length === 0 ? "No Result Found" : " "
                         }
                     </h1>
                     <div className="mt-4 flex flex-wrap gap-5">
                         {
-                            appliedFilter?.map((eachItem : any, Index : any) => (
+                            appliedFilter?.map((eachItem: any, Index: any) => (
                                 <Badge
                                     key={Index}
                                     className="text-[#D19254] rounded-md cursor-pointer whitespace-nowrap text-[16px] border-slate-400" variant="outline">
@@ -71,7 +71,7 @@ function SearchPage() {
                 <div className="flex flex-wrap gap-4 justify-between max-lg:justify-center">
 
                     {
-                        searchedRestaurant?.map((eachCard : any, index : any) => {
+                        searchedRestaurant?.map((eachCard: any, index: any) => {
                             return (
                                 <Card key={index} className="bg-white w-[340px] max-h-[430px] overflow-hidden dark:bg-gray-800 mt-5 shadow-xl hover:shadow-2xl transition-shadow duration-300 border-slate-400">
                                     <div className="w-full relative">
@@ -95,7 +95,7 @@ function SearchPage() {
 
                                         <div className="mt-3 flex gap-2 flex-wrap">
                                             {
-                                                eachCard.cuisines?.map((eachItem : any, Index : any) => (
+                                                eachCard.cuisines?.map((eachItem: any, Index: any) => (
                                                     <Badge
                                                         key={Index}
                                                         className="cursor-pointer whitespace-nowrap text-[16px] border-slate-400 hover:bg-*">
@@ -117,7 +117,7 @@ function SearchPage() {
 
 
                     {
-                        searchedMenuList?.map((eachMenu :any, index :any) => {
+                        searchedMenuList?.map((eachMenu: any, index: any) => {
                             return (
                                 <Card key={index} className="bg-white w-[340px] overflow-hidden dark:bg-gray-800 mt-5 shadow-xl hover:shadow-2xl transition-shadow duration-300 border-slate-400">
 

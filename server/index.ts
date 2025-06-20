@@ -29,6 +29,7 @@ const corsOptions = {
     origin: process.env.FRONTED_URL,
     credentials: true
 }
+
 app.use(cors(corsOptions));
 
 connectDB();

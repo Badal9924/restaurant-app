@@ -8,10 +8,10 @@ export type FilterOptionState = {
   label: string;
 }
 const filterOptions: FilterOptionState[] = [
-  { id: "Indian", label: "Indian" },  
-  { id: "South Indian", label: "South Indian" },  
-  { id: "Italian", label: "Italian" },  
-  { id: "Chinese", label: "Chinese" },   
+  { id: "Indian", label: "Indian" },
+  { id: "South Indian", label: "South Indian" },
+  { id: "Italian", label: "Italian" },
+  { id: "Chinese", label: "Chinese" },
   { id: "Japanese", label: "Japanese" },
   { id: "American", label: "American" },
   { id: "Thai", label: "Thai" },
@@ -38,9 +38,9 @@ function FilterPage() {
               <div className="flex mb-4 items-center gap-2" key={index}>
                 <Checkbox
                   onClick={() => appliedFilterHandler(items?.label)}
-                checked={
-                  JSON.parse(localStorage.getItem("appliedFilter") || "")?.includes(items?.label)
-                }
+                  checked={
+                    JSON.parse(localStorage.getItem("appliedFilter") || "[]")?.includes(items?.label)
+                  }
                 />
                 <Label className="text-xl">{items.label}</Label>
               </div>

@@ -200,7 +200,7 @@ export const ForgotPassword = async (req: Request, res: Response) => {
       user.email,
       `Reset Your Password`,
       `Reset Password link is generated below, Please click it to reset `,
-      ResetPasswordOtpPage(`${process.env.FRONTED_URL}resetpassword/${resetToken}`)
+      ResetPasswordOtpPage(`${process.env.FRONTED_URL}/resetpassword/${resetToken}`)
     );
     
     return res.status(200).json({
