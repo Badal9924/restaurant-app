@@ -57,7 +57,7 @@ function VerifyEmail() {
 
   return (
     <div className="min-h-screen w-full flex justify-center items-center">
-      <div className="max-w-md w-full border-solid border-2 border-zinc-300 px-[15px] py-[15px] rounded-sm">
+      <div className="max-w-md w-full border-solid border-2 border-zinc-300 px-[15px] py-[15px] rounded-sm max-sm:w-[86%]">
         <div>
           <h1 className="text-center text-2xl font-semibold">Verify your email</h1>
           <p className="text-center text-[18px]">Enter the 6 digit code sent to your emailaddress</p>
@@ -74,7 +74,7 @@ function VerifyEmail() {
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChange(index, e.target.value)}
                   onClick={() => handleClick(index)}
                   onKeyDown={(e) => handleKeyDown(index, e)}
-                  className="h-11 w-11 focus-visible:ring-2 focus:border-none border-slate-500 text-center text-xl"
+                  className="h-11 w-11 focus-visible:ring-2 focus:border-none border-slate-500 text-center text-xl max-sm:text-[15px]"
                 />
               })
             }
