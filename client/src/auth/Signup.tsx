@@ -39,7 +39,7 @@ function Signup() {
 
   return (
     <div className="min-h-screen flex justify-center items-center">
-      <form className="w-full max-w-md" onSubmit={submitHandler}>
+      <form className="w-full max-w-md max-sm:w-[86%]" onSubmit={submitHandler}>
 
         <div className="mb-4 flex justify-center">
           <h1 className="font-bold text-2xl">Fomato :)</h1>
@@ -53,7 +53,7 @@ function Signup() {
               value={signUpCredentials.fullName}
               placeholder="Name"
               onChange={changeHandler}
-              className="pl-[45px] text-xl focus-visible:ring-1 focus:border-none border-slate-400" />
+              className="pl-[45px] text-xl focus-visible:ring-1 focus:border-none border-slate-400 max-sm:text-[15px]" />
             <User className="absolute top-2 left-3 text-orange" />
 
           </div>
@@ -67,7 +67,7 @@ function Signup() {
               value={signUpCredentials.email}
               placeholder="Email"
               onChange={changeHandler}
-              className="pl-[45px] text-xl focus-visible:ring-1 focus:border-none border-slate-400" />
+              className="pl-[45px] text-xl focus-visible:ring-1 focus:border-none border-slate-400 max-sm:text-[15px]" />
             <Mail className="absolute top-2 left-3 text-orange" />
 
           </div>
@@ -81,7 +81,7 @@ function Signup() {
               value={signUpCredentials.password}
               onChange={changeHandler}
               placeholder="Password..."
-              className="pl-[45px] text-xl focus-visible:ring-1 focus:border-none border-slate-400" />
+              className="pl-[45px] text-xl focus-visible:ring-1 focus:border-none border-slate-400 max-sm:text-[15px]" />
             <Lock className="absolute top-2 left-3 text-orange" />
 
           </div>
@@ -95,7 +95,7 @@ function Signup() {
               value={signUpCredentials.confirmPassword}
               onChange={changeHandler}
               placeholder="Confirm Your Password..."
-              className="pl-[45px] text-xl focus-visible:ring-1 focus:border-none border-slate-400" />
+              className="pl-[45px] text-xl focus-visible:ring-1 focus:border-none border-slate-400 max-sm:text-[15px]" />
             <Lock className="absolute top-2 left-3 text-orange" />
 
           </div>
@@ -109,7 +109,7 @@ function Signup() {
               value={signUpCredentials.number}
               onChange={changeHandler}
               placeholder="Phone Number..."
-              className="pl-[45px] text-xl focus-visible:ring-1 focus:border-none border-slate-400" />
+              className="pl-[45px] text-xl focus-visible:ring-1 focus:border-none border-slate-400 max-sm:text-[15px]" />
             <PhoneCall className="absolute top-2 left-3 text-orange" />
 
           </div>
@@ -120,7 +120,7 @@ function Signup() {
             loading ? <Button disabled type="submit" className="w-full bg-orange hover:bg-hoverOrange text-xl">
               <Loader2 className="mr-4 animate-spin" /> Please Wait
             </Button> :
-              <Button type="submit" className="w-full bg-orange hover:bg-hoverOrange text-xl">Signup</Button>
+              <Button type="submit" className="w-full bg-orange hover:bg-hoverOrange text-xl max-sm:text-[17px]">Signup</Button>
           }
 
         </div>

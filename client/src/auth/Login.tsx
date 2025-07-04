@@ -29,7 +29,7 @@ function Login() {
 
   return (
     <div className="min-h-screen flex justify-center items-center">
-      <form className="w-full max-w-md" onSubmit={submitHandler}>
+      <form className="w-full max-w-md max-sm:w-[86%]" onSubmit={submitHandler}>
 
         <div className="mb-4 flex justify-center">
           <h1 className="font-bold text-2xl">Login</h1>
@@ -43,7 +43,7 @@ function Login() {
               value={LoginCredentials.email}
               placeholder="Email"
               onChange={changeHandler}
-              className="pl-[45px] text-xl focus-visible:ring-1 focus:border-none border-slate-400" />
+              className="pl-[45px] text-xl focus-visible:ring-1 focus:border-none border-slate-400 max-sm:text-[15px]" />
             <Mail className="absolute top-2 left-3 text-orange" />
           </div>
         </div>
@@ -56,7 +56,7 @@ function Login() {
               value={LoginCredentials.password}
               onChange={changeHandler}
               placeholder="Password..."
-              className="pl-[45px] text-xl focus-visible:ring-1 focus:border-none border-slate-400" />
+              className="pl-[45px] text-xl focus-visible:ring-1 focus:border-none border-slate-400 max-sm:text-[15px]" />
             <Lock className="absolute top-2 left-3 text-orange" />
           </div>
         </div>
@@ -66,7 +66,7 @@ function Login() {
             loading ? <Button disabled type="submit" className="w-full bg-orange hover:bg-hoverOrange text-xl">
               <Loader2 className="mr-4 animate-spin" /> Please Wait
             </Button> :
-              <Button type="submit" className="w-full bg-orange hover:bg-hoverOrange text-xl">Login</Button>
+              <Button type="submit" className="w-full bg-orange hover:bg-hoverOrange text-xl max-sm:text-[17px]">Login</Button>
           }
 
         </div>
