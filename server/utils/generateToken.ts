@@ -8,6 +8,7 @@ export const generateToken = (res: any, user: any) => {
   res.cookie("myToken", tokens, {
     httpOnly: true,
     sameSite: "None",
+    secure: true,
     maxAge: 24 * 60 * 60 * 1000,
   });
   return tokens;
