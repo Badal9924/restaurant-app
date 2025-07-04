@@ -53,7 +53,7 @@ function Navbar() {
                             </AvatarFallback>
                         </Avatar>
                     </Link>
-                    <Link to="/order/status">Order</Link>
+                    <Link to="/order/status">My Order</Link>
 
                     {/* Admin Dashboard */}
                     <div>

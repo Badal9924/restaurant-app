@@ -25,10 +25,12 @@ app.use(bodyParser.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use(express.json());
 app.use(cookieParser());
+
 const corsOptions = {
     origin: process.env.FRONTED_URL,
     credentials: true
 }
+
 app.use(cors(corsOptions));
 
 connectDB();
@@ -41,11 +43,6 @@ app.use("/api/v1/menu",menuRoute);
 app.use("/api/v1/order",orderRoute);
 app.use("/api/v1/cart",cartRouter);
 app.use("/api/v1/city",cityRouter);
-
-app.use(express.static(path.join(DIRNAME,"/client/dist")));
-app.use("*",(_,res) => {
-    res.sendFile(path.resolve(DIRNAME, "client","dist","index.html"));
-});
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);

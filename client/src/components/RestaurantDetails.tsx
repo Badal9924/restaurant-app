@@ -7,10 +7,11 @@ import { useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { useCartStore } from "../store/useCartStore"
 import { AspectRatio } from "./ui/aspect-ratio"
+import PageLoader from "./PageLoader"
 
 function RestaurantDetails() {
   const { getSingleRestaurantDetails, singleRestaurant } = useRestaurantStore();
-  const { addToCart, viewCartItems } = useCartStore();
+  const { addToCart, viewCartItems, FullPageLoader } = useCartStore();
   const params = useParams();
 
   useEffect(() => {
@@ -25,7 +26,7 @@ function RestaurantDetails() {
       <h1 className="font-bold text-2xl mt-5">{singleRestaurant?.restaurantName}</h1>
       <div className="flex gap-3 flex-wrap mt-3">
         {
-          singleRestaurant?.cuisines.map((items :any, index :any) => {
+          singleRestaurant?.cuisines.map((items: any, index: any) => {
             return (
               <Badge key={index} className="text-[18px] px-[10px] py-0">{items}</Badge>
             )
@@ -43,7 +44,7 @@ function RestaurantDetails() {
         <div className="flex flex-wrap justify-between max-md:justify-center gap-5">
 
           {
-            singleRestaurant?.menus.map((eachMenu :any, index :any) => {
+            singleRestaurant?.menus.map((eachMenu: any, index: any) => {
               return (
                 <Card key={index} className="bg-white w-[340px] overflow-hidden dark:bg-gray-800 mt-5 shadow-xl hover:shadow-2xl transition-shadow duration-300 border-slate-400">
                   <AspectRatio ratio={16 / 9} className="w-full">
@@ -60,8 +61,20 @@ function RestaurantDetails() {
 
                   </CardContent>
                   <CardFooter className="flex justify-end mt-2">
+                    {
+                      FullPageLoader ? <><PageLoader /></> : <> <Button
+                        className="text-xl bg-orange hover:bg-hoverOrange w-full"
+                        onClick={async () => {
+                          const addresponsesearchPage = await addToCart(eachMenu?._id);
+                          if (addresponsesearchPage?.success) {
+                            viewCartItems();
+                          }
+                        }}
+                      >Add to Cart
+                      </Button></>
+                    }
 
-                    <Button
+                    {/* <Button
                       className="text-xl bg-orange hover:bg-hoverOrange w-full"
                       onClick={async () => {
                         const addresponse = await addToCart(eachMenu?._id);
@@ -70,7 +83,7 @@ function RestaurantDetails() {
                         }
                       }}
                     >Add to Cart
-                    </Button>
+                    </Button> */}
 
                   </CardFooter>
                 </Card>
