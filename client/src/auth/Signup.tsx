@@ -30,8 +30,8 @@ function Signup() {
         toast.error("Password not Match..");
         return;
       }
-      await signup(signUpCredentials);    
-      navigate('/verifyEmail');        
+      await signup(signUpCredentials);
+      navigate('/verifyEmail');
     } catch (error) {
       console.log(error);
     }
@@ -48,6 +48,7 @@ function Signup() {
         <div className="mb-5">
           <div className="relative">
             <Input
+              required
               type="text"
               name="fullName"
               value={signUpCredentials.fullName}
@@ -62,6 +63,7 @@ function Signup() {
         <div className="mb-5">
           <div className="relative">
             <Input
+              required
               type="text"
               name="email"
               value={signUpCredentials.email}
@@ -76,6 +78,7 @@ function Signup() {
         <div className="mb-5">
           <div className="relative">
             <Input
+              required
               type="password"
               name="password"
               value={signUpCredentials.password}
@@ -90,6 +93,7 @@ function Signup() {
         <div className="mb-5">
           <div className="relative">
             <Input
+              required
               type="password"
               name="confirmPassword"
               value={signUpCredentials.confirmPassword}
@@ -104,6 +108,7 @@ function Signup() {
         <div className="mb-5">
           <div className="relative">
             <Input
+              required
               type="text"
               name="number"
               value={signUpCredentials.number}

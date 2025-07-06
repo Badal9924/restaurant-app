@@ -80,6 +80,7 @@ function Profile() {
                             onChange={changeHandler}
                             type="text"
                             name="fullName"
+                            placeholder="Enter Your Name"
                             className="bg-gray-200 font-bold text-2xl outline-none border-none focus-visible:ring-transparent"
                         />
                     </div>
@@ -107,9 +108,11 @@ function Profile() {
                             <div className="w-full relative h-full pl-1">
                                 <Label className="absolute top-2 font-bold text-[18px]">Address</Label>
                                 <input
+                                required
                                     name="address"
                                     value={profileData.address}
                                     onChange={changeHandler}
+                                    placeholder="Enter your Address"
                                     type="text"
                                     className="w-full font-bold h-full bg-transparent text-gray-600 focus-visible:border-none text-xl pt-7 pl-0 border-none outline-none"
 
@@ -125,10 +128,12 @@ function Profile() {
                                 <div className="w-full relative h-full pl-1">
                                     <Label className="absolute top-2 font-bold text-[18px]">City</Label>
                                     <input
+                                    required
                                         name="city"
                                         value={profileData.city}
                                         onChange={changeHandler}
                                         type="text"
+                                        placeholder="Enter your City"
                                         className="w-full font-bold h-full bg-transparent text-gray-600 focus-visible:border-none text-xl pt-7 pl-0 border-none outline-none"
 
                                     />
@@ -141,6 +146,8 @@ function Profile() {
                                 <div className="w-full relative h-full pl-1">
                                     <Label className="absolute top-2 font-bold text-[18px]">State</Label>
                                     <input
+                                    required
+                                    placeholder="Enter Your State"
                                         name="state"
                                         value={profileData.state}
                                         onChange={changeHandler}
@@ -157,6 +164,8 @@ function Profile() {
                                 <div className="w-full relative h-full pl-1">
                                     <Label className="absolute top-2 font-bold text-[18px]">Pincode</Label>
                                     <input
+                                    required
+                                    placeholder="Enter your pin"
                                         name="pincode"
                                         value={profileData.pincode}
                                         onChange={changeHandler}
@@ -176,6 +185,8 @@ function Profile() {
                             <div className="w-full relative h-full pl-1">
                                 <Label className="absolute top-2 font-bold text-[18px]">Country</Label>
                                 <input
+                                required
+                                placeholder="Enter Your Country Name"
                                     name="country"
                                     value={profileData.country}
                                     onChange={changeHandler}

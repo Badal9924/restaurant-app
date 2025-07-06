@@ -65,6 +65,7 @@ function CheckOutPopUp({ open, setOpenDialog }: { open: boolean, setOpenDialog: 
         <form action="" onSubmit={checkOutHandler}>
           <div className="flex gap-5 items-center mb-2">
             <Input
+              required
               value={input.name}
               placeholder="Full Name"
               onChange={changeHandler}
@@ -81,6 +82,7 @@ function CheckOutPopUp({ open, setOpenDialog }: { open: boolean, setOpenDialog: 
               <div className="w-full relative h-full pl-1">
                 <Label className="absolute top-2 font-bold text-[16px]">Contact</Label>
                 <input
+                  required
                   name="phone"
                   value={input.phone}
                   onChange={changeHandler}
@@ -114,6 +116,7 @@ function CheckOutPopUp({ open, setOpenDialog }: { open: boolean, setOpenDialog: 
               <div className="w-full relative h-full pl-1">
                 <Label className="absolute top-2 font-bold text-[18px]">Address</Label>
                 <input
+                  required
                   name="address"
                   value={input.address}
                   onChange={changeHandler}
@@ -131,6 +134,7 @@ function CheckOutPopUp({ open, setOpenDialog }: { open: boolean, setOpenDialog: 
               <div className="w-full relative h-full pl-1">
                 <Label className="absolute top-2 font-bold text-[18px]">City</Label>
                 <input
+                  required
                   name="city"
                   value={input.city}
                   onChange={changeHandler}
@@ -148,6 +152,7 @@ function CheckOutPopUp({ open, setOpenDialog }: { open: boolean, setOpenDialog: 
               <div className="w-full relative h-full pl-1">
                 <Label className="absolute top-2 font-bold text-[18px]">State</Label>
                 <input
+                  required
                   name="state"
                   value={input.state}
                   onChange={changeHandler}
@@ -165,6 +170,7 @@ function CheckOutPopUp({ open, setOpenDialog }: { open: boolean, setOpenDialog: 
               <div className="w-full relative h-full pl-1">
                 <Label className="absolute top-2 font-bold text-[18px]">Pincode</Label>
                 <input
+                  required
                   name="pincode"
                   value={input.pincode}
                   onChange={changeHandler}
@@ -182,6 +188,7 @@ function CheckOutPopUp({ open, setOpenDialog }: { open: boolean, setOpenDialog: 
               <div className="w-full relative h-full pl-1">
                 <Label className="absolute top-2 font-bold text-[16px]">Country</Label>
                 <input
+                  required
                   name="country"
                   value={input.country}
                   onChange={changeHandler}
