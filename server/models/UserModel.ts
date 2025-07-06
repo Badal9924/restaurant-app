@@ -50,17 +50,17 @@ const UserSchema = new mongoose.Schema<IUserDocument>(
 
     address: {
       type: String,
-      default: "Update your address",
+      // default: "Update your address",
     },
 
     city: {
       type: String,
-      default: "Update your city",
+      // default: "Update your city",
     },
 
     country: {
       type: String,
-      default: "Update your country",
+      // default: "Update your country",
     },
 
     profilePicture: {
